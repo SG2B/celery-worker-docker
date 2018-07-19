@@ -1,0 +1,17 @@
+version: '3'
+services:
+  worker:
+    image: sg2b/celery-worker
+    build:
+      context: .
+    environment:
+      CELERY_BROKER_URL: rmq
+      CELERY_LOG_LEVEL: info
+      WORKER_LOG_LEVEL: info
+  rmq:
+    container_name: rmq
+    image: rabbitmq:3.6.8-management
+    hostname: rmq
+    ports:
+      - 5672:5672
+      - 8091:15672
