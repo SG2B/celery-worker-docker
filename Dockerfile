@@ -3,7 +3,7 @@ MAINTAINER Julien Deruere <julien@sg2b.com>
 
 RUN pip install --upgrade pip
 
-ENV CELERY_VERSION 4.2.0
+ENV CELERY_VERSION 4.2.1
 
 RUN pip install celery=="$CELERY_VERSION"
 
