@@ -1,6 +1,7 @@
-FROM python:3.6-slim
+FROM continuumio/miniconda3:4.5.4
 MAINTAINER Julien Deruere <julien@sg2b.com>
 
+RUN conda update conda
 RUN pip install --upgrade pip
 
 ENV CELERY_VERSION 4.2.1
